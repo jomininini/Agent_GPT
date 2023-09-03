@@ -20,7 +20,7 @@ from langchain.chains import LLMChain
 
 PINECONE_API_KEY = os.getenv("PINECONE_API_KEY")
 PINECONE_ENV = os.getenv("PINECONE_ENV")
-OPENAI_API_KEY = os.getenv("PINECONE_ENV")
+OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")  # Fixed this line
 
 st.set_page_config(layout="wide", page_icon="💬", page_title="HKSTP🤖")
 
