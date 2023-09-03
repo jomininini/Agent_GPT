@@ -1,0 +1,7 @@
+langchain==0.0.276
+openai==0.27.10
+streamlit==1.26.0
+tiktoken==0.4.0
+pandas== 1.5.3
+pinecone-client 
+os-sys
