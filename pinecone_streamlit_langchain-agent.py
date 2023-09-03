@@ -1,4 +1,3 @@
-import os
 import streamlit as st
 import pinecone
 from langchain.embeddings.openai import OpenAIEmbeddings
@@ -29,7 +28,7 @@ st.markdown(
 
 
 # Initialize Pinecone
-pinecone.init(api_key=os.environ["PINECONE_API_KEY"], environment=os.environ["PINECONE_ENV"])
+pinecone.init(api_key=PINECONE_API_KEY, environment=PINECONE_ENV)
 
 # Initialize index and retriever
 embeddings = OpenAIEmbeddings()
@@ -61,10 +60,12 @@ retriever_infrastrature =infrastruture_search.as_retriever(search_kwargs={"k":10
 
 # Initialize GPT-4 for chat
 llm = ChatOpenAI(
-    openai_api_key=os.environ["OPENAI_API_KEY"],
+    openai_api_key=OPENAI_API_KEY,
     model_name='gpt-4',
     temperature=0.5
 )
+
+
 
 # Initialize conversational memory
 conversational_memory = ConversationBufferWindowMemory(
