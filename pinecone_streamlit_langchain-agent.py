@@ -1,3 +1,4 @@
+import os
 import streamlit as st
 import pinecone
 from langchain.embeddings.openai import OpenAIEmbeddings
@@ -16,6 +17,10 @@ from langchain.agents import AgentType
 
 from langchain.prompts import PromptTemplate
 from langchain.chains import LLMChain
+
+PINECONE_API_KEY = os.getenv("PINECONE_API_KEY")
+PINECONE_ENV = os.getenv("PINECONE_ENV")
+OPENAI_API_KEY = os.getenv("PINECONE_ENV")
 
 st.set_page_config(layout="wide", page_icon="💬", page_title="HKSTP🤖")
 
